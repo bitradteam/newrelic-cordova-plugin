@@ -14,7 +14,7 @@ import android.util.Log;
 import com.newrelic.agent.android.Agent;
 import com.newrelic.agent.android.ApplicationPlatform;
 import com.newrelic.agent.android.NewRelic;
-import com.newrelic.agent.android.analytics.AnalyticAttribute;
+import com.newrelic.agent.android.analytics.AnalyticsAttribute;
 import com.newrelic.agent.android.harvest.DeviceInformation;
 import com.newrelic.agent.android.logging.AgentLog;
 
@@ -47,7 +47,7 @@ public class NewRelicCordovaPlugin extends CordovaPlugin {
             devInfo.setApplicationPlatform(ApplicationPlatform.Cordova);
             devInfo.setApplicationPlatformVersion(pluginVersion);
 
-            NewRelic.setAttribute(AnalyticAttribute.APPLICATION_PLATFORM_VERSION_ATTRIBUTE, pluginVersion);            
+            NewRelic.setAttribute(AnalyticsAttribute.APPLICATION_PLATFORM_VERSION_ATTRIBUTE, pluginVersion);            
         }
 
     }
